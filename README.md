@@ -1,1 +1,1 @@
-# Salary-Prediction-Web-app-using-Django-with-PorstgreSQL
+# Salary-Prediction-Web-app-using-Django-with-PostgreSQL
