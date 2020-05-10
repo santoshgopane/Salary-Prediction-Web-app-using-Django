@@ -1,0 +1,120 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Salary Prediction</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<style type="text/css">
+  
+.active {
+    background-color: #4CAF50;
+}
+
+#footer .social a{
+  margin: 0px 10px 0px 0px;
+  display: inline-block;
+  color: #ffffff;
+  width: 10px;
+  border-radius: 15px;
+  line-height: 30px;
+  font-size: 15px;
+  text-align: center;
+  vertical-align: bottom;
+  background: #555555;
+}
+
+body{
+    background-color: #651829;
+  }
+  
+  .container
+  {
+    width: 100%;
+    height: 50%;
+    background-color: grey;
+    margin-top: 3%;
+    margin-bottom: 4%;
+  }
+  .panel-heading
+  {
+    padding-top: 2%;
+  }
+  input[type=text], input[type=amount]
+  {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=number], input[type=amount] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=amount]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  select{
+      width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    margin-bottom: 1%;
+    float: left;
+    margin-top: 1%;
+    opacity: 0.9;
+  }
+  
+  .btn:hover {
+    opacity: 1;
+  }
+ 
+</style>
+<body>
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+          <li class="nav-item">
+      <h3 class="nav-link" >Santosh Bajirao Gopane.</h3>
+    </li>
+    
+  </ul>
+</nav>
+
+<div class="container" >
+    <div class="panel-heading" ><h3>Salary Prediction!</h3></div>
+    <!-- {{messages}} -->
+    {% if a %}
+    <hr>
+    <label for="years"><h3>Expected Salary: {{a}}</h3></label>
+    {% endif %}
+    <form action="predict" method="POST">
+        {% csrf_token %}
+        <hr>
+        
+        <label for="years"><b>Years of Experience:</b></label>
+        <input type="text" placeholder="Enter your Years of Experience" name="years" required>
+
+        <button type="submit" name="submit" class="btn">Predict</button>  
+</div>
+  </div>
+</body>
+</html>

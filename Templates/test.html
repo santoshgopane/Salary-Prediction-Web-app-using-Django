@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Web App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" panel-body="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+  
+.active {
+    background-color: #4CAF50;
+}
+
+
+
+
+#footer .social a{
+  margin: 0px 10px 0px 0px;
+  display: inline-block;
+  color: #ffffff;
+  width: 10px;
+  border-radius: 15px;
+  line-height: 30px;
+  font-size: 15px;
+  text-align: center;
+  vertical-align: bottom;
+  background: #555555;
+}
+
+body{
+    background-color: #651829;
+  }
+  
+  .container
+  {
+    width: 100%;
+    height: 50%;
+    background-color: grey;
+    margin-top: 3%;
+    margin-bottom: 4%;
+  }
+  .panel-heading
+  {
+    padding-top: 2%;
+  }
+  input[type=text], input[type=amount]
+  {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=number], input[type=amount] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=amount]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  select{
+      width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    margin-bottom: 1%;
+    float: left;
+    margin-top: 1%;
+    opacity: 0.9;
+  }
+  
+  .btn:hover {
+    opacity: 1;
+  }
+ 
+</style>
+<body>
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+          <li class="nav-item">
+      <h3 class="nav-link" >Santosh Bajirao Gopane.</h3>
+    </li>
+    
+  </ul>
+</nav>
+
+<div class="container" >
+    <div class="panel-heading" ><h3>PROFIT PREDICTION!</h3></div>
+    <form   method="POST" ><!-- autocomplete="off" -->
+        {% csrf_token %}
+        <hr>
+        
+        <label for="R&D"><b>R&D Spend</b></label>
+        <input type="text" placeholder="Enter your R&D Spend" name="RnD" required>
+
+        <label for="admin"><b>Administration</b></label>
+        <input type="text" placeholder="Enter your Admin Spend" name="admin" required>
+
+        <label for="marketing"><b>Marketing Spend</b></label>
+        <input type="text" placeholder="Enter your Marketing Spend" name="marketing" required>
+
+        <label for="size"><b>State</b></label>
+        <select name="myselectbox">
+            <option name="myoption1" value="Califoria">California</option>
+            <option name="myoption2" value="Florida">Florida</option>
+            <option name="myoption3" value="New York">New York</option>
+        </select>
+
+        <button type="submit" name="wallet" class="btn">Pay using Wallet</button>
+</div>
+
+      
+ 
+  </div>
+
+
+</body>
+</html>
